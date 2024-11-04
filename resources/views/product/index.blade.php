@@ -63,7 +63,7 @@
 						<a class="image" href="cart.html">
 							<img src="{{ asset('images/product-1.png') }}" class="img-fluid product-thumbnail">
 							<h3 class="name">Nordic Chair</h3>
-							<strong class="price">$50.00</strong>
+							<strong class="price">KES50.00</strong>
 
 							<span class="icon-cross">
 								<img src="images/cross.svg" class="img-fluid">
@@ -77,7 +77,7 @@
 						<a class="image" href="cart.html">
 							<img src="{{ asset('images/product-2.png') }}" class="img-fluid product-thumbnail">
 							<h3 class="name">Kruzo Aero Chair</h3>
-							<strong class="price">$78.00</strong>
+							<strong class="price">KES78.00</strong>
 
 							<span class="icon-cross">
 								<img src="images/cross.svg" class="img-fluid">
@@ -91,7 +91,7 @@
 						<a class="image" href="cart.html">
 							<img src="{{ asset('images/product-3.png') }}" class="img-fluid product-thumbnail">
 							<h3 class="name">Ergonomic Chair</h3>
-							<strong class="price">$43.00</strong>
+							<strong class="price">KES43.00</strong>
 
 							<span class="icon-cross">
 								<img src="images/cross.svg" class="img-fluid">

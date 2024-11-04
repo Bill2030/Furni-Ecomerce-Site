@@ -48,9 +48,6 @@
 				</div>
 			</div>
 		<!-- End Hero Section -->
-
-		
-
 		<div class="untree_co-section product-section before-footer-section">
 		    <div class="container">
 		      	<div class="row">
@@ -62,12 +59,12 @@
 						<a class="image" href="#">
 							<img src="{{ asset($product->image) }}" alt="{{ $product->name }}" class="img-fluid product-thumbnail">
 							<h3 class="name">{{ $product->name }}</h3>
-							<strong class="price">${{ $product->price }}</strong>
+							<strong class="price">{{Number::currency( $product->price, 'KES') }}</strong>
 							<span class="icon-cross">
 								<img src="{{ asset('images/cross.svg') }}" class="img-fluid">
 							</span>
 						</a>
-						<a href="{{ route('add.cart', $product->id) }}">Add Cart</a>
+						<a class="btn btn-primary btn-sm justify-center" href="{{ route('add.cart', $product->id) }}">Add Cart</a>
 					</div> 
 					@endforeach
 		      	</div>

@@ -35,6 +35,9 @@ Route::middleware('auth')->group(function () {
     Route::post('/products', [ProductController::class,'store'])->name('products.store');
     Route::get('/add-cart/{productId}', [ProductController::class,'addcart'])->name('add.cart');
     Route::get('/addquantity/{productId}', [ProductController::class,'addquantity'])->name('quantity.add');
+    Route::get('/decreasequantity/{productId}', [ProductController::class,'decreasequantity'])->name('quantity.decrease');
+    Route::get('/removeitem/{productId}', [ProductController::class,'removeitem'])->name('remove.item');
+    Route::get('/clearcart', [ProductController::class,'clearcart'])->name('cart.clear');
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');

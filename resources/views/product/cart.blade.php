@@ -47,20 +47,19 @@
                           <td>
                             <div class="input-group mb-3 d-flex align-items-center quantity-container" style="max-width: 120px;">
                               <div class="input-group-prepend">
-                                <button class="btn btn-outline-black decrease" type="button">&minus;</button>
+								<a href="{{ route('quantity.decrease', $item->id) }}" a class="btn btn-outline-black increase" type="button">&minus;</a>
                               </div>
                               <input type="text" class="form-control text-center quantity-amount" value="{{ $item->quantity }}" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
                               <div class="input-group-append">
-                                <a href="{{ route('quantity.add') }}" a class="btn btn-outline-black increase" type="button">&plus;</a>
+                                <a href="{{ route('quantity.add', $item->id) }}" a class="btn btn-outline-black increase" type="button">&plus;</a>
                               </div>
                             </div>
         
                           </td>
                           <td>{{ $item->quantity * $item->price }}</td>
-                          <td><a href="#" class="btn btn-black btn-sm">X</a></td>
+                          <td><a href="{{ route('remove.item', $item->id) }}" class="btn btn-black btn-sm text-red-800">X</a></td>
                         </tr>
                         @endforeach
-
                       </tbody>
                     </table>
                   </div>
@@ -71,10 +70,11 @@
                 <div class="col-md-6">
                   <div class="row mb-5">
                     <div class="col-md-6 mb-3 mb-md-0">
-                      <button class="btn btn-black btn-sm btn-block">Update Cart</button>
+                    
+					  <a href="{{ route('cart.clear') }}" class="btn btn-warning btn-sm btn-block">Clear Cart</a>
                     </div>
                     <div class="col-md-6">
-                      <button class="btn btn-outline-black btn-sm btn-block">Continue Shopping</button>
+						<a href="{{ route('products.shop') }}" class="btn btn-primary btn-sm btn-block">Back to Shop</a>
                     </div>
                   </div>
                   <div class="row">

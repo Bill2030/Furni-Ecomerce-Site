@@ -38,6 +38,7 @@ class ProductController extends Controller
     }
     public function cart()
     {  
+        
         $subtotals = \Cart::getSubTotal();
         $totals = \Cart::getTotal();
         $items = \Cart::getContent();
@@ -98,4 +99,29 @@ public function addquantity($productId)
     ]);
     return back()->with('success', 'Quantity Added successfully');
 }
+
+ public function decreasequantity($productId)
+ {
+    \Cart::update($productId,[
+        
+        'quantity'=>-1,
+        
+    ]);
+    return back()->with('success', 'Quantity reduced successfully');
+}
+
+public function removeitem($productId)
+{
+    \Cart::remove($productId);
+    return back()->with('success', 'Quantity has been removed from cart');
+}
+
+public function clearcart()
+{
+    \Cart::clear();
+
+    return back()->with('success', 'Cart has been cleared successfully');
+
+}
+
 }

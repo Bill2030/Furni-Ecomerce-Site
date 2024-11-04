@@ -18,9 +18,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
   <title>Furni EComerce</title>
 	</head>
-
 	<body>
-
+		@include('sweetalert::alert')
 		<!-- Start Header/Navigation -->
 		@include('layouts.partials.navbar')
 		<!-- End Header/Navigation -->
@@ -61,10 +60,10 @@
 
 					<!-- Start Column 2 -->
 					<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
-						<a class="product-item" href="cart.html">
+						<a class="image" href="cart.html">
 							<img src="{{ asset('images/product-1.png') }}" class="img-fluid product-thumbnail">
-							<h3 class="product-title">Nordic Chair</h3>
-							<strong class="product-price">$50.00</strong>
+							<h3 class="name">Nordic Chair</h3>
+							<strong class="price">$50.00</strong>
 
 							<span class="icon-cross">
 								<img src="images/cross.svg" class="img-fluid">
@@ -75,10 +74,10 @@
 
 					<!-- Start Column 3 -->
 					<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
-						<a class="product-item" href="cart.html">
+						<a class="image" href="cart.html">
 							<img src="{{ asset('images/product-2.png') }}" class="img-fluid product-thumbnail">
-							<h3 class="product-title">Kruzo Aero Chair</h3>
-							<strong class="product-price">$78.00</strong>
+							<h3 class="name">Kruzo Aero Chair</h3>
+							<strong class="price">$78.00</strong>
 
 							<span class="icon-cross">
 								<img src="images/cross.svg" class="img-fluid">
@@ -89,10 +88,10 @@
 
 					<!-- Start Column 4 -->
 					<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
-						<a class="product-item" href="cart.html">
+						<a class="image" href="cart.html">
 							<img src="{{ asset('images/product-3.png') }}" class="img-fluid product-thumbnail">
-							<h3 class="product-title">Ergonomic Chair</h3>
-							<strong class="product-price">$43.00</strong>
+							<h3 class="name">Ergonomic Chair</h3>
+							<strong class="price">$43.00</strong>
 
 							<span class="icon-cross">
 								<img src="images/cross.svg" class="img-fluid">
@@ -203,7 +202,7 @@
 				<div class="row">
 
 					<div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
-						<div class="product-item-sm d-flex">
+						<div class="image-sm d-flex">
 							<div class="thumbnail">
 								<img src="{{ asset('images/product-1.png') }}" alt="Image" class="img-fluid">
 							</div>
@@ -216,7 +215,7 @@
 					</div>
 
 					<div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
-						<div class="product-item-sm d-flex">
+						<div class="image-sm d-flex">
 							<div class="thumbnail">
 								<img src="{{ asset('images/product-2.png') }}" alt="Image" class="img-fluid">
 							</div>
@@ -229,7 +228,7 @@
 					</div>
 
 					<div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
-						<div class="product-item-sm d-flex">
+						<div class="image-sm d-flex">
 							<div class="thumbnail">
 								<img src="{{ asset('images/product-3.png') }}" alt="Image" class="img-fluid">
 							</div>
@@ -486,8 +485,7 @@
 				<div class="border-top copyright">
 					<div class="row pt-4">
 						<div class="col-lg-6">
-							<p class="mb-2 text-center text-lg-start">Copyright &copy;<script>document.write(new Date().getFullYear());</script>. All Rights Reserved. &mdash; Designed with love by <a href="https://untree.co">Untree.co</a> Distributed By <a hreff="https://themewagon.com">ThemeWagon</a>  <!-- License information: https://untree.co/license/ -->
-            </p>
+							<p class="mb-2 text-center text-lg-center">Copyright &copy;<script>document.write(new Date().getFullYear());</script>. All Rights Reserved. &mdash; Designed with love by Xitin Solutions.</p>
 						</div>
 
 						<div class="col-lg-6 text-center text-lg-end">

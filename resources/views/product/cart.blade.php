@@ -12,16 +12,12 @@
 								<h1>Cart</h1>
 							</div>
 						</div>
-						<div class="col-lg-7">
-							
+						<div class="col-lg-7">		
 						</div>
 					</div>
 				</div>
 			</div>
 		<!-- End Hero Section -->
-
-		
-
 		<div class="untree_co-section before-footer-section">
             <div class="container">
               <div class="row mb-5">
@@ -32,60 +28,39 @@
                         <tr>
                           <th class="product-thumbnail">Image</th>
                           <th class="product-name">Product</th>
-                          <th class="product-price">Price</th>
+                          <th class="price">Price</th>
                           <th class="product-quantity">Quantity</th>
                           <th class="product-total">Total</th>
                           <th class="product-remove">Remove</th>
                         </tr>
                       </thead>
                       <tbody>
+                        @foreach ($items as $item )
                         <tr>
                           <td class="product-thumbnail">
-                            <img src="{{ asset('images/product-1.png') }}" alt="Image" class="img-fluid">
+                            <img src="{{ asset($item->attributes->image) }}" alt="{{ $item->name }}" class="img-fluid">
                           </td>
-                          <td class="product-name">
-                            <h2 class="h5 text-black">Product 1</h2>
+                          <td class="name">
+                            <h2 class="h5 text-black">{{ $item->name }}</h2>
                           </td>
-                          <td>$49.00</td>
+                          <td>{{ Number::currency($item->price, 'KES') }}</td>
                           <td>
                             <div class="input-group mb-3 d-flex align-items-center quantity-container" style="max-width: 120px;">
                               <div class="input-group-prepend">
                                 <button class="btn btn-outline-black decrease" type="button">&minus;</button>
                               </div>
-                              <input type="text" class="form-control text-center quantity-amount" value="1" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+                              <input type="text" class="form-control text-center quantity-amount" value="{{ $item->quantity }}" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
                               <div class="input-group-append">
-                                <button class="btn btn-outline-black increase" type="button">&plus;</button>
+                                <a href="{{ route('quantity.add') }}" a class="btn btn-outline-black increase" type="button">&plus;</a>
                               </div>
                             </div>
         
                           </td>
-                          <td>$49.00</td>
+                          <td>{{ $item->quantity * $item->price }}</td>
                           <td><a href="#" class="btn btn-black btn-sm">X</a></td>
                         </tr>
-        
-                        <tr>
-                          <td class="product-thumbnail">
-                            <img src="{{ asset('images/product-2.png') }}" alt="Image" class="img-fluid">
-                          </td>
-                          <td class="product-name">
-                            <h2 class="h5 text-black">Product 2</h2>
-                          </td>
-                          <td>$49.00</td>
-                          <td>
-                            <div class="input-group mb-3 d-flex align-items-center quantity-container" style="max-width: 120px;">
-                              <div class="input-group-prepend">
-                                <button class="btn btn-outline-black decrease" type="button">&minus;</button>
-                              </div>
-                              <input type="text" class="form-control text-center quantity-amount" value="1" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
-                              <div class="input-group-append">
-                                <button class="btn btn-outline-black increase" type="button">&plus;</button>
-                              </div>
-                            </div>
-        
-                          </td>
-                          <td>$49.00</td>
-                          <td><a href="#" class="btn btn-black btn-sm">X</a></td>
-                        </tr>
+                        @endforeach
+
                       </tbody>
                     </table>
                   </div>
@@ -128,7 +103,7 @@
                           <span class="text-black">Subtotal</span>
                         </div>
                         <div class="col-md-6 text-right">
-                          <strong class="text-black">$230.00</strong>
+                          <strong class="text-black">{{Number::currency($subtotals, 'KES')}}</strong>
                         </div>
                       </div>
                       <div class="row mb-5">
@@ -136,7 +111,7 @@
                           <span class="text-black">Total</span>
                         </div>
                         <div class="col-md-6 text-right">
-                          <strong class="text-black">$230.00</strong>
+                          <strong class="text-black">{{Number::currency($totals, 'KES')  }}</strong>
                         </div>
                       </div>
         
@@ -151,14 +126,12 @@
               </div>
             </div>
           </div>
-		
-
 		<!-- Start Footer Section -->
 		<footer class="footer-section">
 			<div class="container relative">
 
 				<div class="sofa-img">
-					<img src="images/sofa.png" alt="Image" class="img-fluid">
+					<img src="{{ asset('images/sofa.png') }}" alt="Image" class="img-fluid">
 				</div>
 
 				<div class="row">
@@ -250,15 +223,12 @@
 								<li><a href="#">Privacy Policy</a></li>
 							</ul>
 						</div>
-
 					</div>
 				</div>
 
 			</div>
 		</footer>
 		<!-- End Footer Section -->	
-
-
 		<script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
 		<script src="{{ asset('js/tiny-slider.js') }}"></script>
 		<script src="{{ asset('js/custom.js') }}"></script>

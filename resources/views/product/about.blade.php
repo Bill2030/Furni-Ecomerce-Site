@@ -24,7 +24,7 @@
 
 					<ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
 						<li><a class="nav-link" href="#"><img src="{{ asset('images/user.svg') }}"></a></li>
-						<li><a class="nav-link" href="cart.html"><img src="images/cart.svg"></a></li>
+						<li><a class="nav-link" href="cart.html"><img src="{{ asset('images/cart.svg') }}"></a></li>
 					</ul>
 				</div>
 			</div>
@@ -143,7 +143,7 @@
 
 					<!-- Start Column 2 -->
 					<div class="col-12 col-md-6 col-lg-3 mb-5 mb-md-0">
-						<img src="images/person_2.jpg" class="img-fluid mb-5">
+						<img src="{{ asset('images/person_2.jpg') }}" class="img-fluid mb-5">
 
 						<h3 clas><a href="#"><span class="">Jeremy</span> Walker</a></h3>
             <span class="d-block position mb-4">CEO, Founder, Atty.</span>
@@ -296,7 +296,7 @@
 				<div class="row">
 					<div class="col-lg-8">
 						<div class="subscription-form">
-							<h3 class="d-flex align-items-center"><span class="me-1"><img src="images/envelope-outline.svg" alt="Image" class="img-fluid"></span><span>Subscribe to Newsletter</span></h3>
+							<h3 class="d-flex align-items-center"><span class="me-1"><img src="{{ asset('images/envelope-outline.svg') }}" alt="Image" class="img-fluid"></span><span>Subscribe to Newsletter</span></h3>
 
 							<form action="#" class="row g-3">
 								<div class="col-auto">
@@ -372,8 +372,7 @@
 				<div class="border-top copyright">
 					<div class="row pt-4">
 						<div class="col-lg-6">
-							<p class="mb-2 text-center text-lg-start">Copyright &copy;<script>document.write(new Date().getFullYear());</script>. All Rights Reserved. &mdash; Designed with love by <a href="https://untree.co">Untree.co</a> Distributed By <a hreff="https://themewagon.com">ThemeWagon</a>  <!-- License information: https://untree.co/license/ -->
-            </p>
+							<p class="mb-2 text-center text-lg-start">Copyright &copy;<script>document.write(new Date().getFullYear());</script>. All Rights Reserved. &mdash; Designed with love by Xitin Solutions.</p>
 						</div>
 
 						<div class="col-lg-6 text-center text-lg-end">

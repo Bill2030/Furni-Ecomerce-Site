@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use Cart;
+use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ProductController extends Controller
 {
@@ -12,7 +15,8 @@ class ProductController extends Controller
     }
     public function shop()
     {
-        return view("product.shop");
+        $products = Product::all();
+        return view("product.shop", compact('products'));
     }
     public function about()
     {
@@ -20,7 +24,8 @@ class ProductController extends Controller
     }
     public function services()
     {
-        return view("product.services");
+        $products = Product::all();
+        return view("product.services", compact('products'));
     
     }
     public function blog()
@@ -32,8 +37,65 @@ class ProductController extends Controller
         return view("product.contact");
     }
     public function cart()
-    {
-    
-        return view("product.cart");
+    {  
+        $subtotals = \Cart::getSubTotal();
+        $totals = \Cart::getTotal();
+        $items = \Cart::getContent();
+        return view("product.cart", compact('items', 'totals', 'subtotals'));
     }
+
+
+public function create()
+{
+    return view("product.create");
+
+}
+public function store(Request $request)
+{
+    $formFields = $request->validate([
+      
+        'name' => 'required',
+        'price' => 'required',
+        'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',   
+    ]);
+
+    $imageName = time().'.'.$request->image->extension();
+    $request->image->move(public_path('images'), $imageName);
+    $product = new Product();
+    $product->name = $request->name;
+    $product->price = $request->price;
+    $product->image = 'images/'.$imageName;
+    $product->save();
+    return redirect()->route('products.index')->with('success', 'Product created successfully.');
+    
+    
+}
+
+public function addcart($productId)
+{
+    $product = Product::findOrFail($productId);
+
+    // add the product to cart
+\Cart::add(array(
+    'id' => $productId,
+    'name' => $product->name,
+    'price' => $product->price,
+    'quantity' => 1,
+    'attributes' => array(
+        'image'=>$product->image
+    ),
+    'associatedModel' => $product
+));
+return redirect()->route('products.cart')->with('success', 'Products added successfully');
+
+}
+
+public function addquantity($productId)
+{
+    \Cart::update($productId,[
+        
+        'quantity' => +1,
+    ]);
+    return back()->with('success', 'Quantity Added successfully');
+}
 }

@@ -17,7 +17,7 @@
 						</div>
 						<div class="col-lg-7">
 							<div class="hero-img-wrap">
-								<img src="images/couch.png" class="img-fluid">
+								<img src="{{ asset('images/couch.png') }}" class="img-fluid">
 							</div>
 						</div>
 					</div>
@@ -30,13 +30,11 @@
 		<!-- Start Why Choose Us Section -->
 		<div class="why-choose-section">
 			<div class="container">
-				
-				
 				<div class="row my-5">
 					<div class="col-6 col-md-6 col-lg-3 mb-4">
 						<div class="feature">
 							<div class="icon">
-								<img src="images/truck.svg" alt="Image" class="imf-fluid">
+								<img src="{{ asset('images/truck.svg') }}" alt="Image" class="imf-fluid">
 							</div>
 							<h3>Fast &amp; Free Shipping</h3>
 							<p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
@@ -46,7 +44,7 @@
 					<div class="col-6 col-md-6 col-lg-3 mb-4">
 						<div class="feature">
 							<div class="icon">
-								<img src="images/bag.svg" alt="Image" class="imf-fluid">
+								<img src="{{ asset('images/bag.svg') }}" alt="Image" class="imf-fluid">
 							</div>
 							<h3>Easy to Shop</h3>
 							<p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
@@ -56,7 +54,7 @@
 					<div class="col-6 col-md-6 col-lg-3 mb-4">
 						<div class="feature">
 							<div class="icon">
-								<img src="images/support.svg" alt="Image" class="imf-fluid">
+								<img src="{{ asset('images/support.svg') }}" alt="Image" class="imf-fluid">
 							</div>
 							<h3>24/7 Support</h3>
 							<p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
@@ -66,7 +64,7 @@
 					<div class="col-6 col-md-6 col-lg-3 mb-4">
 						<div class="feature">
 							<div class="icon">
-								<img src="images/return.svg" alt="Image" class="imf-fluid">
+								<img src="{{ asset('images/return.svg') }}" alt="Image" class="imf-fluid">
 							</div>
 							<h3>Hassle Free Returns</h3>
 							<p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
@@ -76,7 +74,7 @@
 					<div class="col-6 col-md-6 col-lg-3 mb-4">
 						<div class="feature">
 							<div class="icon">
-								<img src="images/truck.svg" alt="Image" class="imf-fluid">
+								<img src="{{ asset('images/truck.svg') }}" alt="Image" class="imf-fluid">
 							</div>
 							<h3>Fast &amp; Free Shipping</h3>
 							<p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
@@ -86,7 +84,7 @@
 					<div class="col-6 col-md-6 col-lg-3 mb-4">
 						<div class="feature">
 							<div class="icon">
-								<img src="images/bag.svg" alt="Image" class="imf-fluid">
+								<img src="{{ asset('images/bag.svg') }}" alt="Image" class="imf-fluid">
 							</div>
 							<h3>Easy to Shop</h3>
 							<p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
@@ -96,7 +94,7 @@
 					<div class="col-6 col-md-6 col-lg-3 mb-4">
 						<div class="feature">
 							<div class="icon">
-								<img src="images/support.svg" alt="Image" class="imf-fluid">
+								<img src="{{ asset('images/support.svg') }}" alt="Image" class="imf-fluid">
 							</div>
 							<h3>24/7 Support</h3>
 							<p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
@@ -106,7 +104,7 @@
 					<div class="col-6 col-md-6 col-lg-3 mb-4">
 						<div class="feature">
 							<div class="icon">
-								<img src="images/return.svg" alt="Image" class="imf-fluid">
+								<img src="{{ asset('images/return.svg') }}" alt="Image" class="imf-fluid">
 							</div>
 							<h3>Hassle Free Returns</h3>
 							<p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
@@ -134,13 +132,13 @@
 
 					<!-- Start Column 2 -->
 					<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
-						<a class="product-item" href="#">
-							<img src="images/product-1.png" class="img-fluid product-thumbnail">
-							<h3 class="product-title">Nordic Chair</h3>
-							<strong class="product-price">$50.00</strong>
+						<a class="image" href="#">
+							<img src="{{ asset('images/product-1.png') }}" class="img-fluid product-thumbnail">
+							<h3 class="name">Nordic Chair</h3>
+							<strong class="price">$50.00</strong>
 
 							<span class="icon-cross">
-								<img src="images/cross.svg" class="img-fluid">
+								<img src="{{ asset('images/cross.svg') }}" class="img-fluid">
 							</span>
 						</a>
 					</div> 
@@ -148,13 +146,13 @@
 
 					<!-- Start Column 3 -->
 					<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
-						<a class="product-item" href="#">
-							<img src="images/product-2.png" class="img-fluid product-thumbnail">
-							<h3 class="product-title">Kruzo Aero Chair</h3>
-							<strong class="product-price">$78.00</strong>
+						<a class="image" href="#">
+							<img src="{{ asset('images/product-2.png') }}" class="img-fluid product-thumbnail">
+							<h3 class="name">Kruzo Aero Chair</h3>
+							<strong class="price">$78.00</strong>
 
 							<span class="icon-cross">
-								<img src="images/cross.svg" class="img-fluid">
+								<img src="{{ asset('images/cross.svg') }}" class="img-fluid">
 							</span>
 						</a>
 					</div>
@@ -162,13 +160,13 @@
 
 					<!-- Start Column 4 -->
 					<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
-						<a class="product-item" href="#">
-							<img src="images/product-3.png" class="img-fluid product-thumbnail">
-							<h3 class="product-title">Ergonomic Chair</h3>
-							<strong class="product-price">$43.00</strong>
+						<a class="image" href="#">
+							<img src="{{ asset('images/product-3.png') }}" class="img-fluid product-thumbnail">
+							<h3 class="name">Ergonomic Chair</h3>
+							<strong class="price">$43.00</strong>
 
 							<span class="icon-cross">
-								<img src="images/cross.svg" class="img-fluid">
+								<img src="{{ asset('images/cross.svg') }}" class="img-fluid">
 							</span>
 						</a>
 					</div>
@@ -212,7 +210,7 @@
 
 												<div class="author-info">
 													<div class="author-pic">
-														<img src="images/person-1.png" alt="Maria Jones" class="img-fluid">
+														<img src="{{ asset('images/person-1.png') }}" alt="Maria Jones" class="img-fluid">
 													</div>
 													<h3 class="font-weight-bold">Maria Jones</h3>
 													<span class="position d-block mb-3">CEO, Co-Founder, XYZ Inc.</span>
@@ -235,7 +233,7 @@
 
 												<div class="author-info">
 													<div class="author-pic">
-														<img src="images/person-1.png" alt="Maria Jones" class="img-fluid">
+														<img src="{{ asset('images/person-1.png') }}" alt="Maria Jones" class="img-fluid">
 													</div>
 													<h3 class="font-weight-bold">Maria Jones</h3>
 													<span class="position d-block mb-3">CEO, Co-Founder, XYZ Inc.</span>
@@ -258,7 +256,7 @@
 
 												<div class="author-info">
 													<div class="author-pic">
-														<img src="images/person-1.png" alt="Maria Jones" class="img-fluid">
+														<img src="{{ asset('images/person-1.png') }}" alt="Maria Jones" class="img-fluid">
 													</div>
 													<h3 class="font-weight-bold">Maria Jones</h3>
 													<span class="position d-block mb-3">CEO, Co-Founder, XYZ Inc.</span>
@@ -286,13 +284,13 @@
 			<div class="container relative">
 
 				<div class="sofa-img">
-					<img src="images/sofa.png" alt="Image" class="img-fluid">
+					<img src="{{ asset('images/sofa.png') }}" alt="Image" class="img-fluid">
 				</div>
 
 				<div class="row">
 					<div class="col-lg-8">
 						<div class="subscription-form">
-							<h3 class="d-flex align-items-center"><span class="me-1"><img src="images/envelope-outline.svg" alt="Image" class="img-fluid"></span><span>Subscribe to Newsletter</span></h3>
+							<h3 class="d-flex align-items-center"><span class="me-1"><img src="{{ asset('images/envelope-outline.svg') }}" alt="Image" class="img-fluid"></span><span>Subscribe to Newsletter</span></h3>
 
 							<form action="#" class="row g-3">
 								<div class="col-auto">
@@ -368,7 +366,7 @@
 				<div class="border-top copyright">
 					<div class="row pt-4">
 						<div class="col-lg-6">
-							<p class="mb-2 text-center text-lg-start">Copyright &copy;<script>document.write(new Date().getFullYear());</script>. All Rights Reserved. &mdash; Designed with love by <a href="https://untree.co">Untree.co</a> Distributed By <a hreff="https://themewagon.com">ThemeWagon</a> <!-- License information: https://untree.co/license/ -->
+							<p class="mb-2 text-center text-lg-start">Copyright &copy;<script>document.write(new Date().getFullYear());</script>. All Rights Reserved. &mdash; Designed with love by Xitin Solutions.</p>
             </p>
 						</div>
 
